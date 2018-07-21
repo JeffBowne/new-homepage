@@ -1,9 +1,25 @@
 ---
 ---
 
-@import "colors";
-@import "primary_nav";
+/**
+ * Settings
+ */
 
-.crazy {
-	color: tomato;
-}
+@import 'settings/colors';
+@import 'settings/global';
+@import 'settings/typography';
+
+
+/**
+ * Tools
+ */
+
+@import 'tools/functions';
+@import 'tools/mixins';
+
+
+/**
+ * Components
+ */
+
+@import 'components/primary_nav';

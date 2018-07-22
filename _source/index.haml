@@ -4,8 +4,21 @@
     %title Jeff Bowne
     %meta{ name: 'viewport', content: 'width=device-width' }
     %link{ rel: 'stylesheet', type: 'text/css', href: 'css/styles.css' }
+    / %link{ href: "http://fonts.googleapis.com/css?family=Bitter:400,700", rel: "stylesheet", type: "text/css"}
+    %link{ href: "css/font-awesome.min.css", rel: "stylesheet", type: "text/css"}
     / %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' }
     / %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
 
   %body
-    %h1 Time to start the website
+    %h1 Time to start the website and fix ruby.
+
+    
+    
+    / = Haml::Engine.new(File.read('primary_nav.html')).render
+    
+    = Haml::Engine.new(File.read('test.html')).render
+
+
+    / = Haml::Engine.new(File.readlines('primary_nav.haml')[0]).render
+    / = Haml::Engine.new('%p this is testing god').render
+    / = Haml::Engine.new(menu.haml).render(self)

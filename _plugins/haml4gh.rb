@@ -6,32 +6,54 @@ module GithubPagesHamlHelper
   class Generator < Jekyll::Generator
     def generate(site)
 
-      source = parse_source(site)
+      partials_source = parse_partials_source(site)
+      page_source = parse_page_source(site)
       destination = site.config["source"]
 
-      Dir.glob(File.join(source, '*.haml')).each do |source_file|
-        destination_file = source_file.sub(source, destination).sub(/\.haml$/i, '.html')
+      generate_partials(partials_source, destination)
 
-        if older?(destination_file, source_file)
-          log 'skipped ' + destination_file
-          next
-        end
-
-        # this will stop current process
-        # opts = Haml::Exec::Haml.new([source_file, destination_file])
-        # opts.parse!
-        log `haml #{source_file} #{destination_file}`
-        log "#{source_file} -->> #{destination_file}"
-      end
-
+      generate_pages(page_source, destination)
     end
 
-    def parse_source(site)
+    def generate_partials(partials_source, destination)
+      Dir.glob(File.join(partials_source, '*.haml')).each do |source_file|
+        destination_file = source_file.sub(partials_source, destination).sub(/\.haml$/i, '.html')
+
+        if file_unchanged?(destination_file, source_file)
+          log 'skipped ' + destination_file
+        else
+          log `haml #{source_file} #{destination_file}`
+          log "#{source_file} -->> #{destination_file}"
+        end
+      end
+    end
+
+    def generate_pages(page_source, destination)
+      Dir.glob(File.join(page_source, '*.haml')).each do |source_file|
+        destination_file = source_file.sub(page_source, destination).sub(/\.haml$/i, '.html')
+
+        if file_unchanged?(destination_file, source_file)
+          log 'skipped ' + destination_file
+        else
+          log `haml #{source_file} #{destination_file}`
+          log "#{source_file} -->> #{destination_file}"
+        end
+      end
+    end
+
+    def parse_partials_source(site)
+      plugin_config = site.config["haml4gh"]
+      File.join(site.config["source"], (plugin_config && plugin_config["source"] || "_source/partials"))
+      # TODO: improve this check
+    end
+
+    def parse_page_source(site)
       plugin_config = site.config["haml4gh"]
       File.join(site.config["source"], (plugin_config && plugin_config["source"] || "_source"))
+      # TODO: improve this check 
     end
 
-    def older?(destination_file, source_file)
+    def file_unchanged?(destination_file, source_file)
       File.exists?(destination_file) && (File.mtime(destination_file) >= File.mtime(source_file))
     end
 

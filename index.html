@@ -4,10 +4,21 @@
 <title>Jeff Bowne</title>
 <meta content='width=device-width' name='viewport'>
 <link href='css/styles.css' rel='stylesheet' type='text/css'>
+<!-- %link{ href: "http://fonts.googleapis.com/css?family=Bitter:400,700", rel: "stylesheet", type: "text/css"} -->
+<link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 <!-- %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' } -->
 <!-- %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' } -->
 </head>
 <body>
-<h1>Time to start the website</h1>
+<h1>Time to start the website and fix ruby.</h1>
+<!-- = Haml::Engine.new(File.read('primary_nav.html')).render -->
+<div class='partial-test'>
+<h2>This is the partial in the folder. Did you fix ruby?</h2>
+<p>yes</p>
+</div>
+
+<!-- = Haml::Engine.new(File.readlines('primary_nav.haml')[0]).render -->
+<!-- = Haml::Engine.new('%p this is testing god').render -->
+<!-- = Haml::Engine.new(menu.haml).render(self) -->
 </body>
 </html>

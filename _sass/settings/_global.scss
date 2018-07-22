@@ -2,3 +2,22 @@
     #GLOBAL
 \*------------------------------------*/
 
+
+/**
+ * Default global spacing units
+ */
+
+$spacing-unit:            8px;
+$spacing-unit--x2:        round($spacing-unit * 2);
+$spacing-unit--x3:        round($spacing-unit * 3);
+$spacing-unit--x4:        round($spacing-unit * 4);
+$spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
+
+
+/**
+ * Breakpoint widths
+ */
+
+$small-breakpoint:   700px;
+$medium-breakpoint:  760px;
+$wide-breakpoint:    960px;

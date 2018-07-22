@@ -2,7 +2,17 @@
     #PRIMARY-NAV
 \*------------------------------------*/
 
+$font-size-nav-items:    $font-size + 4;
 
-h1 {
-	color: $purple;
+
+.primary-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
+
+	.primary-nav__item {
+		display: inline-block;
+	}
+
+	.primary-nav__item--tag {}

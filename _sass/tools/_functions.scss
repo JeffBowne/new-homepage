@@ -2,3 +2,39 @@
     #FUNCTIONS
 \*------------------------------------*/
 
+
+/**
+ * px-to-percent
+ *
+ * Allows a percentage to be calculated based on two pixel values. Useful when
+ * a developer is trying to preserve the presentation of a component while the
+ * browser window is being scrolled.
+ *
+ * The first argument should be the desired width of an element within it's
+ * container at a known size. The second argument should be that container's
+ * known size.
+ *
+ * The values supplied should be unitless. Example: `px-to-percent(100, 300)`
+ *
+ * This would produce a percentage width for an element of ~100px when it's
+ * immediate container is ~300px.
+ */
+
+@function px-to-percent($target, $context) {
+    @return unquote($target / $context * 100 + '%');
+}
+
+
+/**
+ * Math helpers
+ *
+ * Halve and double numbers, with or without units, returning a whole number
+ */
+
+@function halve($number) {
+    @return round($number / 2);
+}
+
+@function double($number) {
+    @return round($number * 2);
+}

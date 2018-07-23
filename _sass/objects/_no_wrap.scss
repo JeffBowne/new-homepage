@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #NO-WRAP
+\*------------------------------------*/
+
+/**
+ * This object prohibits spans from wrapping in smaller viewports
+ */
+
+@mixin no-wrap {
+	white-space: nowrap;
+}
+
+%no-wrap {
+    @include no-wrap;
+}
+
+.no-wrap {
+    @extend %no-wrap;
+}

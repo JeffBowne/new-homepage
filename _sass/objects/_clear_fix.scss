@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #CLEAR-FIX
+\*------------------------------------*/
+
+/**
+ * This object extends a container past floated child elemets.
+ */
+
+@mixin clear-fix {
+	overflow: auto;
+}
+
+%clear-fix {
+    @include clear-fix;
+}
+
+.clear-fix {
+    @extend %clear-fix;
+}

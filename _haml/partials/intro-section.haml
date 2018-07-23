@@ -1,7 +1,9 @@
 .intro-section
-  .intro-section__headline
-    .intro-section__headline-flare
-    %h1.intro-section__headline-heading
+  .intro-section__banner
+    .intro-section__banner-flare welcome
+    %h1.intro-section__heading
+      %span.intro-section__heading-span MY NAME IS
+      %span.intro-section__heading-span JEFF BOWNE
 
   .intro-section__content
     %img.intro-section__image{src: 'images/angleshot.jpg', alt: ''}
@@ -15,7 +17,7 @@
       %p
         I built this site utilizing Jekyll as a simple framework - writing in HAML, SASS, and jQuery - using partial file structure for both markup and stylesheets - while untilizing BEM namespacing and elements of ITCSS. 
 
-        I used Jekyll as a simple framework so that I can host the site on GitHub Pages. Jekyll does work with HAML via plugins, but GitHub Pages does not support those plugins, so I wrote a ruby interpreter to precompile my haml files before 
+        I used Jekyll as a simple framework so that I could host the site on GitHub Pages but I had to tweek some things in order to use HAML. Jekyll does work with HAML via plugins, but GitHub Pages does not support those plugins, so I wrote a ruby interpreter that runs a compiler locally and spits out html files into the parent directory for Jekyll to process before I commit the result.  
 
     .intro-section__icon-links
       %a.intro-section__icon-link.intro-section__icon-link--left{ href: "https://www.linkedin.com/in/jeffbowne"}

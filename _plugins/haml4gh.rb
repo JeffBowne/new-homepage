@@ -2,20 +2,18 @@ module GithubPagesHamlHelper
   # require 'haml'
   # require 'haml/exec'
 
-  # Github Pages don't support Haml plugins, so have to run Html2Haml locally and commit the results
   class Generator < Jekyll::Generator
     def generate(site)
 
       partials_source = parse_partials_source(site)
       page_source = parse_page_source(site)
-      destination = site.config["source"]
+      destination = site.config["html_result_dir"]
 
-      generate_partials(partials_source, destination)
-
+      generate_partials(page_source, partials_source, destination)
       generate_pages(page_source, destination)
     end
 
-    def generate_partials(partials_source, destination)
+    def generate_partials(page_source, partials_source, destination)
       Dir.glob(File.join(partials_source, '*.haml')).each do |source_file|
         destination_file = source_file.sub(partials_source, destination).sub(/\.haml$/i, '.html')
 
@@ -24,6 +22,8 @@ module GithubPagesHamlHelper
         else
           log `haml #{source_file} #{destination_file}`
           log "#{source_file} -->> #{destination_file}"
+
+          generate_pages(page_source, destination)
         end
       end
     end
@@ -42,15 +42,11 @@ module GithubPagesHamlHelper
     end
 
     def parse_partials_source(site)
-      plugin_config = site.config["haml4gh"]
-      File.join(site.config["source"], (plugin_config && plugin_config["source"] || "_source/partials"))
-      # TODO: improve this check
+      File.join(site.config["source"], (site.config["haml_partials_dir"]))
     end
 
     def parse_page_source(site)
-      plugin_config = site.config["haml4gh"]
-      File.join(site.config["source"], (plugin_config && plugin_config["source"] || "_source"))
-      # TODO: improve this check 
+      File.join(site.config["source"], (site.config["haml_dir"])) 
     end
 
     def file_unchanged?(destination_file, source_file)

@@ -1,3 +1,4 @@
+!!!
 %html
   %head
     %meta{ charset: 'utf-8' }
@@ -10,8 +11,22 @@
     / %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
 
   %body
-    Jeff Bq
-
     = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
-    = Haml::Engine.new(File.read('generated_html/intro-section.html')).render
-    = Haml::Engine.new(File.read('generated_html/resume-section.html')).render
+
+    = Haml::Engine.new(File.read('generated_html/intro_area.html')).render
+
+    .divider-bar
+      %i.divider-bar__icon.fa.fa-code.fa-3x
+    = Haml::Engine.new(File.read('generated_html/resume_area.html')).render
+
+    .divider-bar
+      %i.divider-bar__icon.fa.fa-code.fa-3x
+    = Haml::Engine.new(File.read('generated_html/animals_area.html')).render
+
+    .divider-bar
+      %i.divider-bar__icon.fa.fa-code.fa-3x
+    = Haml::Engine.new(File.read('generated_html/design_area.html')).render
+
+    .divider-bar
+      %i.divider-bar__icon.fa.fa-code.fa-3x
+    = Haml::Engine.new(File.read('generated_html/contact_area.html')).render

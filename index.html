@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset='utf-8'>
@@ -10,7 +11,6 @@
 <!-- %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' } -->
 </head>
 <body>
-Jeff Bxddddd
 <ul class='primary-nav'>
 <li class='primary-nav__item primary-nav__item--tag'>
 <a href='#'>
@@ -31,43 +31,145 @@ Jeff Bxddddd
 </li>
 </ul>
 
-<div class='intro-section'>
-<div class='intro-section__banner'>
-<div class='intro-section__banner-flare'>welcome</div>
-<h1 class='intro-section__heading'>
-<span class='intro-section__heading-span'>MY NAME IS</span>
-<span class='intro-section__heading-span'>JEFF BOWNE</span>
+<div class='intro-area'>
+<div class='intro-area__banner'>
+<div class='intro-area__banner-flare'>welcome</div>
+<h1 class='intro-area__heading'>
+<span class='intro-area__heading-span'>MY NAME IS</span>
+<span class='intro-area__heading-span'>JEFF BOWNE</span>
 </h1>
 </div>
-<div class='intro-section__content'>
-<img alt='' class='intro-section__image' src='images/angleshot.jpg'>
-<div class='intro-section__summary'>
+<div class='intro-area__section'>
+<img alt='' class='intro-area__image' src='images/angleshot.jpg'>
+<div class='intro-area__summary'>
 <p>
 I'm a web developer with a knack for design. I code in Philly&mdash;where I've lived my whole life. I also build custom effects pedals under the banner of
-<a class='intro-section__summary-link' href='https://www.facebook.com/sixtyfortycustompedals'>Sixty/Forty Custom Pedals</a>
+<a class='intro-area__summary-link' href='https://www.facebook.com/sixtyfortycustompedals'>Sixty/Forty Custom Pedals</a>
 and play guitar/sing in my noiserock/post-hardcore band
-<a class='intro-section__summary-link' href='http://www.fakingband.com'>FAKING</a>
+<a class='intro-area__summary-link' href='http://www.fakingband.com'>FAKING</a>
 </p>
 <p>
 I built this site utilizing Jekyll as a simple framework - writing in HAML, SASS, and jQuery - using partial file structure for both markup and stylesheets - while untilizing BEM namespacing and elements of ITCSS.
-I used Jekyll as a simple framework so that I could host the site on GitHub Pages but I had to tweek some things in order to use HAML. Jekyll does work with HAML via plugins, but GitHub Pages does not support those plugins, so I wrote a ruby interpreter that runs a compiler locally and spits out html files into the parent directory for Jekyll to process before I commit the result.
+I used Jekyll as a simple framework so that I could host the site on GitHub Pages but I had to tweek some things in order to use HAML. Jekyll does work with HAML via plugins, but GitHub Pages does not support those plugins, so I wrote a ruby class that runs a compiler locally whenever I modify a haml file and spits out the resulting html files into the parent directory for Jekyll to process before I commit the result.
 </p>
 </div>
-<div class='intro-section__icon-links'>
-<a class='intro-section__icon-link intro-section__icon-link--left' href='https://www.linkedin.com/in/jeffbowne'>
+<div class='intro-area__icon-links'>
+<a class='intro-area__icon-link intro-area__icon-link--left' href='https://www.linkedin.com/in/jeffbowne'>
 <i class='fa fa-linkedin fa-3x'></i>
 </a>
-<a class='intro-section__icon-link intro-section__icon-link--middle' href='https://github.com/JeffBowne'>
+<a class='intro-area__icon-link intro-area__icon-link--middle' href='https://github.com/JeffBowne'>
 <i class='fa fa-github fa-4x'></i>
 </a>
-<a class='intro-section__icon-link intro-section__icon-link--right' href='http://www.fakingband.com'>
+<a class='intro-area__icon-link intro-area__icon-link--right' href='http://www.fakingband.com'>
 <i class='fa fa-music fa-3x'></i>
 </a>
 </div>
 </div>
 </div>
 
-<div class='resume-section'></div>
+<div class='divider-bar'>
+<i class='divider-bar__icon fa fa-code fa-3x'></i>
+</div>
+<div class='resume-area'>
+<h2 class='resume-area__heading'>
+<span class='resume-area__heading-span'>A RESUME</span>
+<span class='resume-area__heading-span'>OF SORTS</span>
+</h2>
+<h3 class='resume-area__subheading'>EDUCATION</h3>
+<div class='resume-area__section'>
+<div class='resume-area__place'>
+<span class='resume-area__place-name'>New York Code + Design Academy</span>
+<span class='resume-area__place-city'>, Philadelphia PA</span>
+</div>
+<div class='resume-area__time'>June 2015-August 2015</div>
+<div class='resume-area__detail'>Web Development Intensive</div>
+<div class='resume-area__note'>&ndash; A twelve week coding bootcamp that covers front and back end web development.</div>
+</div>
+<h3 class='resume-area__subheading'>WORK EXPERIENCE</h3>
+<div class='resume-area__section'>
+<div class='resume-area__place'>
+<div class='resume-area__place-name'>Weblinc</div>
+<div class='resume-area__place-city'>, Philadelphia PA</div>
+</div>
+<div class='resume-area__time'>February 2016-July 2018</div>
+<div class='resume-area__detail'>Front-End Developer</div>
+</div>
+<div class='resume-area__section'>
+<div class='resume-area__place'>
+<div class='resume-area__place-name'>New York Code + Design Academy</div>
+<div class='resume-area__place-city'>, Philadelphia PA</div>
+</div>
+<div class='resume-area__time'>Sept 2015-Jan 2016</div>
+<div class='resume-area__detail'>Teaching Assistant</div>
+</div>
+<h3 class='resume-area__subheading'>VOLUNTEER WORK</h3>
+<div class='resume-area__section'>
+<div class='resume-area__place'>
+<div class='resume-area__place-name'>Animal Care and Control Team</div>
+<div class='resume-area__place-city'>, Philadelphia PA</div>
+</div>
+<div class='resume-area__time'>Sept 2012-May 2015</div>
+<div class='resume-area__detail'>Foster Care Provider</div>
+</div>
+<h3 class='resume-area__subheading'>TALKS</h3>
+<div class='resume-area__section'>
+<div class='resume-area__place'>
+<div class='resume-area__place-name'>The Philly Front-end/UX Meetup</div>
+</div>
+<div class='resume-area__time'>November 4th, 2015</div>
+<div class='resume-area__detail'>"Teaching Concepts with Scrolling CSS Animations"</div>
+</div>
+<div class='resume-area__section'>
+<div class='resume-area__place'>
+<div class='resume-area__place-name'>NYCDA Web Development Intensive</div>
+</div>
+<div class='resume-area__time'>January 21st, 2016</div>
+<div class='resume-area__detail'>Guest lecture on Flexbox Layout</div>
+</div>
+</div>
+
+<div class='divider-bar'>
+<i class='divider-bar__icon fa fa-code fa-3x'></i>
+</div>
+<div class='animals-area'>
+<h2 class='animals-area__heading'>COMPANION ANIMALS</h2>
+<div class='animals-area__section'>coming soon</div>
+</div>
+
+<div class='divider-bar'>
+<i class='divider-bar__icon fa fa-code fa-3x'></i>
+</div>
+<div class='design-area'>
+<h2 class='design-area__heading'>GRAPHIC DESIGN</h2>
+<div class='design-area__image-container'>
+<img alt='' src='images/instamatic.jpg'>
+</div>
+<div class='design-area__image-container'>
+<img alt='' src='images/GV3attach.jpg'>
+</div>
+<div class='design-area__image-container'>
+<img alt='' src='images/fakingshirt.jpg'>
+</div>
+<div class='design-area__image-container'>
+<img alt='' src='images/dbcover.jpg'>
+</div>
+<div class='design-area__image-container'>
+<img alt='' src='images/tourposter1.jpg'>
+</div>
+<div class='design-area__image-container'>
+<img alt='' src='images/tourposter2.jpg'>
+</div>
+</div>
+
+<div class='divider-bar'>
+<i class='divider-bar__icon fa fa-code fa-3x'></i>
+</div>
+<div class='contact-area'>
+<h2 class='contact-area__heading'>CONTACT ME</h2>
+<div class='contact-area__link-box'>
+<a class='contact-area__link' href='https://www.linkedin.com/in/jeffbowne' target='_blank'>linkedin.com/in/jeffbowne</a>
+</div>
+</div>
 
 </body>
 </html>

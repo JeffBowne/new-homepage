@@ -30,7 +30,7 @@ plugins:
 
 haml_partials_dir: '_haml/partials'
 haml_dir: '_haml'
-html_result_dir: 'generated_html'
+generated_html_dir: 'generated_html'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

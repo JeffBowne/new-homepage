@@ -2,22 +2,37 @@
     #GLOBAL
 \*------------------------------------*/
 
-
 /**
- * Default global spacing units
+ * Default Global Spacing Units
  */
 
-$spacing-unit:            8px;
+$spacing-unit:            6px;
 $spacing-unit--x2:        round($spacing-unit * 2);
 $spacing-unit--x3:        round($spacing-unit * 3);
 $spacing-unit--x4:        round($spacing-unit * 4);
 $spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
 
-
 /**
- * Breakpoint widths
+ * Breakpoint Widths
  */
 
 $small-breakpoint:   700px;
 $medium-breakpoint:  760px;
 $wide-breakpoint:    960px;
+
+/**
+ * Global Styles
+ */
+
+body {
+  @include antialias;
+  margin: 0;
+  color: $white;
+  font-size: $font-size;
+  font-family: $font-family-primary;
+  background: $blue;
+  // background: url(../images/parts-bg.png) no-repeat center center fixed;
+  // background-size: cover;
+}
+
+img:not(.background__image) { max-width: 100%; }

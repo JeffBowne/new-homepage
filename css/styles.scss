@@ -6,9 +6,8 @@
  */
 
 @import 'settings/colors';
-@import 'settings/global';
 @import 'settings/typography';
-
+@import 'settings/global';
 
 /**
  * Tools
@@ -17,18 +16,17 @@
 @import 'tools/functions';
 @import 'tools/mixins';
 
-
 /**
  * Objects
  */
 
 @import 'objects/no_wrap';
 
-
 /**
  * Components
  */
 
+@import 'components/background';
 @import 'components/primary_nav';
 @import 'components/intro_area';
 @import 'components/resume_area';

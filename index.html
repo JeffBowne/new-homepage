@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8'>
 <title>Jeff Bowne</title>
-<meta content='width=device-width' name='viewport'>
+<meta charset='utf-8'>
+<meta content='width = device-width, initial-scale = 1, maximum-scale = 1' name='viewport'>
 <link href='css/styles.css' rel='stylesheet' type='text/css'>
-<!-- %link{ href: "http://fonts.googleapis.com/css?family=Bitter:400,700", rel: "stylesheet", type: "text/css"} -->
 <link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 <!-- %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' } -->
 <!-- %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' } -->
 </head>
 <body>
-<ul class='primary-nav'>
-<li class='primary-nav__item primary-nav__item--tag'>
-<a href='#'>
+<div class='background'>
+<img alt='background' class='background__image' src='images/parts-bg.png'>
+</div>
+<ul class='primary-nav'><li class='primary-nav__tag'>
+<a class='primary-nav__tag-link' href='#'>
 <i class='fa fa-code fa-3x'></i>
 </a>
-</li>
-<li class='primary-nav__item'>
-<a href='#'>RESUME</a>
-</li>
-<li class='primary-nav__item'>
-<a href='#'>ARTWORK</a>
-</li>
-<li class='primary-nav__item'>
-<a href='#'>DESIGN</a>
-</li>
-<li class='primary-nav__item'>
-<a href='#'>CONTACT</a>
-</li>
-</ul>
+</li><li class='primary-nav__item'>
+<a class='primary-nav__item-link' href='#'>RESUME</a>
+</li><li class='primary-nav__item'>
+<a class='primary-nav__item-link' href='#'>ARTWORK</a>
+</li><li class='primary-nav__item'>
+<a class='primary-nav__item-link' href='#'>DESIGN</a>
+</li><li class='primary-nav__item'>
+<a class='primary-nav__item-link' href='#'>CONTACT</a>
+</li></ul>
 
 <div class='intro-area'>
 <div class='intro-area__banner'>
@@ -45,12 +41,11 @@
 <p>
 I'm a web developer with a knack for design. I code in Philly&mdash;where I've lived my whole life. I also build custom effects pedals under the banner of
 <a class='intro-area__summary-link' href='https://www.facebook.com/sixtyfortycustompedals'>Sixty/Forty Custom Pedals</a>
-and play guitar/sing in my noiserock/post-hardcore band
+and I'm the guitar player and singer in a noise-rock/post-hardcore band called
 <a class='intro-area__summary-link' href='http://www.fakingband.com'>FAKING</a>
 </p>
 <p>
-I built this site utilizing Jekyll as a simple framework - writing in HAML, SASS, and jQuery - using partial file structure for both markup and stylesheets - while untilizing BEM namespacing and elements of ITCSS.
-I used Jekyll as a simple framework so that I could host the site on GitHub Pages but I had to tweek some things in order to use HAML. Jekyll does work with HAML via plugins, but GitHub Pages does not support those plugins, so I wrote a ruby class that runs a compiler locally whenever I modify a haml file and spits out the resulting html files into the parent directory for Jekyll to process before I commit the result.
+I built this site with Haml, Sass, and jQuery - using partial file structure for both markup and stylesheets - untilizing BEM namespacing and elements of ITCSS - using Jekyll as a framework.
 </p>
 </div>
 <div class='intro-area__icon-links'>

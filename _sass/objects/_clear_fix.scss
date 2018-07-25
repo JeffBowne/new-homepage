@@ -7,13 +7,13 @@
  */
 
 @mixin clear-fix {
-	overflow: auto;
+  overflow: auto;
 }
 
 %clear-fix {
-    @include clear-fix;
+  @include clear-fix;
 }
 
 .clear-fix {
-    @extend %clear-fix;
+  @extend %clear-fix;
 }

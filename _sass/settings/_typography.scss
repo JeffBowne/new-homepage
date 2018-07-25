@@ -2,23 +2,35 @@
     #TYPOGRAPHY
 \*------------------------------------*/
 
-// Google Fonts
+/**
+ * Google Fonts Import
+ */
+
 @import url(http://fonts.googleapis.com/css?family=Bitter:400);
 
-// Font Variables
-$font-family-primary:      'Bitter', serif;   
+/**
+ * Font Variables
+ */
+
+$font-family-primary:      'Bitter', serif;
 $font-family-secondary:    'Helvetica', sans-serif;
 
-body {
-	font-family: $font-family-primary;
+/**
+ * Antialiasing
+ */
+
+@mixin antialias {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
 /**
- * Text sizes
+ * Text Sizes
  */
 
 $font-size:              16px;
+$font-size-small:        $font-size - 2;
 $font-size-large:        $font-size * 2;
 $font-size-x-large:      $font-size * 3;
 $font-size-huge:         $font-size * 4;

@@ -5,6 +5,14 @@
 
 .animals-area {}
 
-  .animals-area__heading {}
+  .animals-area__heading {
+    color: $red;
+  }
 
   .animals-area__section {}
+
+    .animals-area__coming-soon {
+      font-size: 18px;
+      letter-spacing: 12px;
+      text-align: center;
+    }

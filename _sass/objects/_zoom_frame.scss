@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #ZOOM-FRAME
+\*------------------------------------*/
+
+$zoom-frame-active-bg-color:    rgba(11, 11, 11, 0.7);
+
+@keyframes zoom-frame-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.zoom-frame {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  margin: 0;
+  width: auto;
+  height: auto;
+  background: $zoom-frame-active-bg-color;
+  opacity: 0;
+  animation: zoom-frame-fade-in 200ms ease-out forwards;
+
+  img {
+    animation: zoom-frame-fade-in 400ms ease-out 200ms forwards;
+  }
+}

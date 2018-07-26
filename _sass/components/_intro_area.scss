@@ -10,21 +10,19 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
 }
 
 @keyframes flash {
-  0% { text-shadow: 0 0 0 $white; }
-  50% { text-shadow: 0 0 15px $white; }
-  100% { text-shadow: 0 0 0 $white; }
+  0% { text-shadow: 0 0 0 $white;}
+  25% { text-shadow: 0 0 15px $white;}
+  100% { text-shadow: 0 0 0 $white;}
 }
 
-
 .intro-area {
-  margin: 0 auto;
-  padding-top: 60px;
-  width: calc(100% - 12px);
+  margin: 0 6px;
+  padding: 60px 0;
   border-left: solid $black 1px;
   box-sizing: border-box;
 
   @include respond-to($medium-breakpoint) {
-    width: calc(100% - 48px);
+    margin: 0 24px;
   }
 }
 
@@ -54,22 +52,13 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
 
     .intro-area__heading {
       @include full-bleed-container;
-
-      margin-top: 0;
-      margin-bottom: 0;
-      font-size: 11vw;
-      font-weight: normal;
-      letter-spacing: 6px;
-      text-align: center;
-      animation: flash 2s ease-in 1s forwards;
+      animation: flash 1s ease-in-out 2s;
 
       @include respond-to($medium-breakpoint) {
         position: static;
         margin: 0;
         padding-left: 10px;
         width: auto;
-        font-size: 64px;
-        letter-spacing: 3px;
         text-align: left;
       }
     }
@@ -79,9 +68,8 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
       }
 
   .intro-area__section {
-
     @include respond-to($medium-breakpoint) {
-      margin-top: $spacing-unit--x4;
+      margin: $spacing-unit--x4 0;
     }
   }
 
@@ -89,12 +77,12 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
       display: block;
       margin: 0 auto;
       width: 80%;
-      max-width: 400px;
+      max-width: 300px;
       border-radius: 500px;
 
       @include respond-to($medium-breakpoint) {
         display: inline-block;
-        margin-left: 40px;
+        margin: 0 40px;
         width: 25%;
         min-width: 200px;
         vertical-align: middle;
@@ -108,17 +96,16 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
     }
 
     .intro-area__summary {
-      display: inline-block;
-      margin: $spacing-unit;
+      margin-left: $spacing-unit;
       padding-left: 5px;
-      width: calc(100% - 12px);
       font-size: 14px;
       line-height: 22px;
       border-left: solid $white 4px;
       box-sizing: border-box;
 
       @include respond-to($medium-breakpoint) {
-        margin-left: 40px;
+        display: inline-block;
+        margin: 0;
         width: 700px;
         max-width: 50%;
         font-size: 16px;
@@ -129,6 +116,7 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
 
       .intro-area__summary-link {
         color: $white;
+        font-weight: bold;
         text-decoration: none;
 
         &:hover {
@@ -141,47 +129,42 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
         }
       }
 
-
-
-
-
-
-
-
-    .intro-area__icon-links {
-      margin: 60px auto;
+    .intro-area__icons {
+      @include full-bleed-container;
+      padding: 60px 0;
       text-align: center;
+
+      @include respond-to($medium-breakpoint) {
+        padding: 40px 0;
+        text-align: center;
+      }
     }
 
       .intro-area__icon-link {
+        display: inline-block;
+        padding: 0 10%;
         color: $white;
         font-size: 10px;
         transition-duration: 200ms;
-
-        &:hover {
-          color: $black;
-          text-shadow: $intro-area-icon-shadow;
-        }
 
         &:focus {
           color: $black;
           text-shadow: $intro-area-icon-shadow;
           outline: none;
         }
+
+        @include respond-to($medium-breakpoint) {
+          font-size: 16px;
+
+          &:hover {
+            color: $black;
+            text-shadow: $intro-area-icon-shadow;
+          }
+
+          &:focus {
+            color: $black;
+            text-shadow: $intro-area-icon-shadow;
+            outline: none;
+          }
+        }
       }
-
-      .intro-area__icon-link--left {}
-
-      .intro-area__icon-link--middle {}
-
-      .intro-area__icon-link--right {}
-
-
-
-
-
-
-
-
-
-

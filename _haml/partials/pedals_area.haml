@@ -1,0 +1,9 @@
+.pedals-area
+  %h2.pedals-area__heading
+    %span.pedals-area__heading-span PEDALS
+    %span.pedals-area__heading-span I'VE BUILT
+
+  .pedals-area__gallery
+    -Dir.glob('images/pedals/*').each do |image|
+      .pedals-area__frame{ data: { zoom_frame: '' } }
+        %img.pedals-area__image{ alt: '', src: image }

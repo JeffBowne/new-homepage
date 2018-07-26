@@ -2,24 +2,79 @@
     #RESUME-AREA
 \*------------------------------------*/
 
-.resume-area {}
+.resume-area {
+  margin: 0 6px;
 
-  .resume-area__heading {}
+  @include respond-to($medium-breakpoint) {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
 
-    .resume-area__heading-span {}
+  .resume-area__heading {
+    color: $yellow;
+  }
 
-  .resume-area__subheading {}
+    .resume-area__heading-span {
+      @include no-wrap;
+    }
 
-  .resume-area__section {}
+  .resume-area__subheading {
+    margin: 80px 0 15px;
+    line-height: 0;
+    text-align: center;
+    border-bottom: solid $yellow 2px;
+  }
 
-    .resume-area__place {}
+  .resume-area__section {
+    margin-bottom: 32px;
+    padding: 0 6%;
+    text-shadow: 0 0 15px $black, 0 0 5px $black;
+  }
 
-      .resume-area__place-name {}
+    .resume-area__place {
+      @include respond-to($medium-breakpoint) {
+        float: left;
+      }
+    }
 
-      .resume-area__place-city {}
+      .resume-area__place-name {
+        font-size: 17px;
+        font-weight: bold;
+        // text-shadow: 0 0 1px $white;
 
-    .resume-area__time {}
+        @include respond-to($medium-breakpoint) {
+          display: inline-block;
+        }
+      }
 
-    .resume-area__detail {}
+      .resume-area__place-city {
+        display: none;
 
-    .resume-area__note {}
+        @include respond-to($wide-breakpoint) {
+          display: inline-block;
+        }
+      }
+
+    .resume-area__time {
+      padding: 0 0 10px 15px;
+
+      @include respond-to($medium-breakpoint) {
+        float: right;
+        padding: 0;
+      }
+    }
+
+    .resume-area__detail {
+      clear: both;
+      font-size: 14px;
+      font-style: italic;
+
+      @include respond-to($medium-breakpoint) {
+        font-size: 16px
+      }
+    }
+
+    .resume-area__note {
+      font-size: 12px;
+    }

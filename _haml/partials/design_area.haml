@@ -1,15 +1,7 @@
 .design-area
   %h2.design-area__heading GRAPHIC DESIGN
 
-  .design-area__image-container
-    %img{alt: '', src: 'images/instamatic.jpg'}
-  .design-area__image-container
-    %img{alt: '', src: 'images/GV3attach.jpg'}
-  .design-area__image-container
-    %img{alt: '', src: 'images/fakingshirt.jpg'}
-  .design-area__image-container
-    %img{alt: '', src: 'images/dbcover.jpg'}
-  .design-area__image-container
-    %img{alt: '', src: 'images/tourposter1.jpg'}
-  .design-area__image-container
-    %img{alt: '', src: 'images/tourposter2.jpg'}
+  .design-area__gallery
+    -Dir.glob('images/design/*').each do |image|
+      .design-area__frame{ data: { zoom_frame: '' } }
+        %img.design-area__image{ alt: '', src: image }

@@ -6,25 +6,26 @@
 <meta content='width = device-width, initial-scale = 1, maximum-scale = 1' name='viewport'>
 <link href='css/styles.css' rel='stylesheet' type='text/css'>
 <link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<script src='animations.js'></script>
 <!-- %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' } -->
-<!-- %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' } -->
 </head>
 <body>
 <div class='background'>
 <img alt='background' class='background__image' src='images/parts-bg.png'>
 </div>
 <ul class='primary-nav'><li class='primary-nav__tag'>
-<a class='primary-nav__tag-link' href='#'>
+<a class='primary-nav__tag-link' data-nav-link='' href='#'>
 <i class='fa fa-code fa-3x'></i>
 </a>
-</li><li class='primary-nav__item'>
-<a class='primary-nav__item-link' href='#'>RESUME</a>
-</li><li class='primary-nav__item'>
-<a class='primary-nav__item-link' href='#'>ARTWORK</a>
-</li><li class='primary-nav__item'>
-<a class='primary-nav__item-link' href='#'>DESIGN</a>
-</li><li class='primary-nav__item'>
-<a class='primary-nav__item-link' href='#'>CONTACT</a>
+</li><li class='primary-nav__item primary-nav__item--yellow'>
+<a class='primary-nav__item-link' data-nav-link='' href='#'>RESUME</a>
+</li><li class='primary-nav__item primary-nav__item--red'>
+<a class='primary-nav__item-link' data-nav-link='' href='#'>ANIMALS</a>
+</li><li class='primary-nav__item primary-nav__item--green'>
+<a class='primary-nav__item-link' data-nav-link='' href='#'>PEDALS</a>
+</li><li class='primary-nav__item primary-nav__item--purple'>
+<a class='primary-nav__item-link' data-nav-link='' href='#'>DESIGN</a>
 </li></ul>
 
 <div class='intro-area'>
@@ -39,26 +40,27 @@
 <img alt='' class='intro-area__image' src='images/angleshot.jpg'>
 <div class='intro-area__summary'>
 <p>
-I'm a web developer with a knack for design. I code in Philly&mdash;where I've lived my whole life. I also build custom effects pedals under the banner of
+<span>I'm a web developer with a knack for design. I've lived my whole life in Philly or 5 minutes outside of it. When I'm not coding I build custom effects pedals under the banner of</span>
 <a class='intro-area__summary-link' href='https://www.facebook.com/sixtyfortycustompedals'>Sixty/Forty Custom Pedals</a>
-and I'm the guitar player and singer in a noise-rock/post-hardcore band called
+<span>and I'm the guitar player and singer in a noise-rock/post-hardcore band called</span>
 <a class='intro-area__summary-link' href='http://www.fakingband.com'>FAKING</a>
+<span>.</span>
 </p>
 <p>
 I built this site with Haml, Sass, and jQuery - using partial file structure for both markup and stylesheets - untilizing BEM namespacing and elements of ITCSS - using Jekyll as a framework.
 </p>
 </div>
-<div class='intro-area__icon-links'>
-<a class='intro-area__icon-link intro-area__icon-link--left' href='https://www.linkedin.com/in/jeffbowne'>
+</div>
+<div class='intro-area__icons'>
+<a class='intro-area__icon-link' href='https://www.linkedin.com/in/jeffbowne'>
 <i class='fa fa-linkedin fa-3x'></i>
 </a>
-<a class='intro-area__icon-link intro-area__icon-link--middle' href='https://github.com/JeffBowne'>
+<a class='intro-area__icon-link' href='https://github.com/JeffBowne'>
 <i class='fa fa-github fa-4x'></i>
 </a>
-<a class='intro-area__icon-link intro-area__icon-link--right' href='http://www.fakingband.com'>
+<a class='intro-area__icon-link' href='http://www.fakingband.com'>
 <i class='fa fa-music fa-3x'></i>
 </a>
-</div>
 </div>
 </div>
 
@@ -128,7 +130,80 @@ I built this site with Haml, Sass, and jQuery - using partial file structure for
 </div>
 <div class='animals-area'>
 <h2 class='animals-area__heading'>COMPANION ANIMALS</h2>
-<div class='animals-area__section'>coming soon</div>
+<div class='animals-area__section'></div>
+<div class='animals-area__coming-soon'>coming soon</div>
+</div>
+
+<div class='divider-bar'>
+<i class='divider-bar__icon fa fa-code fa-3x'></i>
+</div>
+<div class='pedals-area'>
+<h2 class='pedals-area__heading'>
+<span class='pedals-area__heading-span'>PEDALS</span>
+<span class='pedals-area__heading-span'>I'VE BUILT</span>
+</h2>
+<div class='pedals-area__gallery'>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/powerload.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/podcast.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/monkey-rat.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/volume.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/leviathan.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/dandelion.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/rat-mouth.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/preamp.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/boost.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/hot-stove.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/violet.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/funkzilla.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/toynbee.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/dice.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/marco.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/compass.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/dead-reverb.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/distortion.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/warfuzz.jpg'>
+</div>
+<div class='pedals-area__frame' data-zoom-frame=''>
+<img alt='' class='pedals-area__image' src='images/pedals/neon.jpg'>
+</div>
+</div>
 </div>
 
 <div class='divider-bar'>
@@ -136,35 +211,34 @@ I built this site with Haml, Sass, and jQuery - using partial file structure for
 </div>
 <div class='design-area'>
 <h2 class='design-area__heading'>GRAPHIC DESIGN</h2>
-<div class='design-area__image-container'>
-<img alt='' src='images/instamatic.jpg'>
+<div class='design-area__gallery'>
+<div class='design-area__frame' data-zoom-frame=''>
+<img alt='' class='design-area__image' src='images/design/fakingshirt.jpg'>
 </div>
-<div class='design-area__image-container'>
-<img alt='' src='images/GV3attach.jpg'>
+<div class='design-area__frame' data-zoom-frame=''>
+<img alt='' class='design-area__image' src='images/design/tourposter2.jpg'>
 </div>
-<div class='design-area__image-container'>
-<img alt='' src='images/fakingshirt.jpg'>
+<div class='design-area__frame' data-zoom-frame=''>
+<img alt='' class='design-area__image' src='images/design/tourposter1.jpg'>
 </div>
-<div class='design-area__image-container'>
-<img alt='' src='images/dbcover.jpg'>
+<div class='design-area__frame' data-zoom-frame=''>
+<img alt='' class='design-area__image' src='images/design/fakingvices.jpg'>
 </div>
-<div class='design-area__image-container'>
-<img alt='' src='images/tourposter1.jpg'>
+<div class='design-area__frame' data-zoom-frame=''>
+<img alt='' class='design-area__image' src='images/design/GV3attach.jpg'>
 </div>
-<div class='design-area__image-container'>
-<img alt='' src='images/tourposter2.jpg'>
+<div class='design-area__frame' data-zoom-frame=''>
+<img alt='' class='design-area__image' src='images/design/dbcover.jpg'>
 </div>
+<div class='design-area__frame' data-zoom-frame=''>
+<img alt='' class='design-area__image' src='images/design/mouthep1.jpg'>
 </div>
-
-<div class='divider-bar'>
-<i class='divider-bar__icon fa fa-code fa-3x'></i>
+<div class='design-area__frame' data-zoom-frame=''>
+<img alt='' class='design-area__image' src='images/design/instamatic.jpg'>
 </div>
-<div class='contact-area'>
-<h2 class='contact-area__heading'>CONTACT ME</h2>
-<div class='contact-area__link-box'>
-<a class='contact-area__link' href='https://www.linkedin.com/in/jeffbowne' target='_blank'>linkedin.com/in/jeffbowne</a>
 </div>
 </div>
 
+<div class='footer'></div>
 </body>
 </html>

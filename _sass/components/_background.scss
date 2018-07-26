@@ -2,6 +2,11 @@
     #BACKGROUND
 \*------------------------------------*/
 
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 
 .background {
   position: fixed;
@@ -15,6 +20,9 @@
   .background__image {
     @include center($to: 'both');
     width: 160%;
+    opacity: 0;
+    animation: fade-in 400ms ease-out 200ms forwards;
+
 
     @include respond-to($medium-breakpoint) {
       @include center($to: 'both');

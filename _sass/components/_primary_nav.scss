@@ -21,7 +21,7 @@ $font-size-nav-items:    $font-size + 4;
   list-style: none;
   transition-duration: 100ms;
 
-  @include respond-to($medium-breakpoint) {
+  @include respond-to($small-breakpoint) {
     height: 29px;
   }
 }
@@ -34,6 +34,10 @@ $font-size-nav-items:    $font-size + 4;
     z-index: -10;
     height: 27px;
     clip: rect(9px, auto, 35px, auto);
+
+    @include respond-to($small-breakpoint) {
+      top: 25px;
+    }
 
 
     @include respond-to($medium-breakpoint) {
@@ -66,10 +70,13 @@ $font-size-nav-items:    $font-size + 4;
     text-align: center;
     transition-duration: 3000ms;
 
+    @include respond-to($small-breakpoint) {
+      font-size: 20px;
+    }
+
     @include respond-to($medium-breakpoint) {
       width: 120px;
       float: left;
-      font-size: 20px;
     }
   }
 
@@ -89,3 +96,24 @@ $font-size-nav-items:    $font-size + 4;
         transition-duration: 100ms;
       }
     }
+
+    .primary-nav__item-link--highlight {
+      text-shadow: 0 -2px 1px $black;
+
+      .primary-nav__item--yellow & {
+        color: $yellow;
+      }
+
+      .primary-nav__item--red & {
+        color: $red;
+      }
+
+      .primary-nav__item--green & {
+        color: $green;
+      }
+
+      .primary-nav__item--purple & {
+        color: $purple;
+      }
+    }
+

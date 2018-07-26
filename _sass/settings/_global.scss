@@ -16,9 +16,12 @@ $spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
  * Breakpoint Widths
  */
 
-$small-breakpoint:   700px;
-$medium-breakpoint:  760px;
-$wide-breakpoint:    960px;
+$small-breakpoint:   480px;
+$medium-breakpoint:  768px;
+$wide-breakpoint:    991px;
+
+// $medium-breakpoint:  700px;
+// $wide-breakpoint:    960px;
 
 /**
  * Global Styles
@@ -35,4 +38,20 @@ body {
   // background-size: cover;
 }
 
-img:not(.background__image) { max-width: 100%; }
+
+// .hovres {
+//     color: #E2B000;
+//     text-shadow: 0 -2px 1px #000;
+// }
+// .hovart {
+//     color: #FB5C43;
+//     text-shadow: 0 -2px 1px #000;
+// }
+// .hovdes {
+//     color: #75B391;
+//     text-shadow: 0 -2px 1px #000;
+// }
+// .hovcon {
+//     color: #9E8DA7;
+//     text-shadow: 0 -2px 1px #000;
+// }

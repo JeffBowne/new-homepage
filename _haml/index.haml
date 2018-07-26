@@ -6,8 +6,9 @@
     %meta{ name: 'viewport', content: 'width = device-width, initial-scale = 1, maximum-scale = 1' }
     %link{ rel: 'stylesheet', type: 'text/css', href: 'css/styles.css' }
     %link{ href: 'css/font-awesome.min.css', rel: 'stylesheet', type: 'text/css' }
+    %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
+    %script{ src: 'animations.js' }
     / %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' }
-    / %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
 
   %body
     .background
@@ -27,8 +28,10 @@
 
     .divider-bar
       %i.divider-bar__icon.fa.fa-code.fa-3x
-    = Haml::Engine.new(File.read('generated_html/design_area.html')).render
+    = Haml::Engine.new(File.read('generated_html/pedals_area.html')).render
 
     .divider-bar
       %i.divider-bar__icon.fa.fa-code.fa-3x
-    = Haml::Engine.new(File.read('generated_html/contact_area.html')).render
+    = Haml::Engine.new(File.read('generated_html/design_area.html')).render
+
+    .footer

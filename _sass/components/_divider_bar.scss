@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #DIVIDER-BAR
+\*------------------------------------*/
+
+.divider-bar {
+  margin: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  text-align: center;
+  background: $black;
+  border-top: solid $white 4px;
+
+  .intro-area + & {
+    margin-top: 0;
+    color: $yellow;
+    border-bottom: solid $yellow 4px;
+  }
+
+  .resume-area + & {
+    color: $red;
+    border-bottom: solid $red 4px;
+  }
+
+  .animals-area + & {
+    color: $green;
+    border-bottom: solid $green 4px;
+  }
+
+  .pedals-area + & {
+    color: $purple;
+    border-bottom: solid $purple 4px;
+  }
+}
+
+  .divider-bar__icon {
+    transition-duration: 600ms;
+  }

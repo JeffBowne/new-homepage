@@ -10,22 +10,22 @@
 <script src='animations.js'></script>
 <!-- %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' } -->
 </head>
-<body>
+<body id='top'>
 <div class='background'>
 <img alt='background' class='background__image' src='images/parts-bg.png'>
 </div>
 <ul class='primary-nav'><li class='primary-nav__tag'>
-<a class='primary-nav__tag-link' data-nav-link='' href='#'>
+<a class='primary-nav__tag-link' data-nav-link='' href='#top'>
 <i class='fa fa-code fa-3x'></i>
 </a>
-</li><li class='primary-nav__item primary-nav__item--yellow'>
-<a class='primary-nav__item-link' data-nav-link='' href='#'>RESUME</a>
-</li><li class='primary-nav__item primary-nav__item--red'>
-<a class='primary-nav__item-link' data-nav-link='' href='#'>ANIMALS</a>
-</li><li class='primary-nav__item primary-nav__item--green'>
-<a class='primary-nav__item-link' data-nav-link='' href='#'>PEDALS</a>
-</li><li class='primary-nav__item primary-nav__item--purple'>
-<a class='primary-nav__item-link' data-nav-link='' href='#'>DESIGN</a>
+</li><li class='primary-nav__item primary-nav__item--resume'>
+<a class='primary-nav__item-link' data-nav-link='' href='#resume-area'>RESUME</a>
+</li><li class='primary-nav__item primary-nav__item--animals'>
+<a class='primary-nav__item-link' data-nav-link='' href='#animals-area'>ANIMALS</a>
+</li><li class='primary-nav__item primary-nav__item--pedals'>
+<a class='primary-nav__item-link' data-nav-link='' href='#pedals-area'>PEDALS</a>
+</li><li class='primary-nav__item primary-nav__item--design'>
+<a class='primary-nav__item-link' data-nav-link='' href='#design-area'>DESIGN</a>
 </li></ul>
 
 <div class='intro-area'>
@@ -67,7 +67,7 @@ I built this site with Haml, Sass, and jQuery - using partial file structure for
 <div class='divider-bar'>
 <i class='divider-bar__icon fa fa-code fa-3x'></i>
 </div>
-<div class='resume-area'>
+<div class='resume-area' id='resume-area'>
 <h2 class='resume-area__heading'>
 <span class='resume-area__heading-span'>A RESUME</span>
 <span class='resume-area__heading-span'>OF SORTS</span>
@@ -128,7 +128,7 @@ I built this site with Haml, Sass, and jQuery - using partial file structure for
 <div class='divider-bar'>
 <i class='divider-bar__icon fa fa-code fa-3x'></i>
 </div>
-<div class='animals-area'>
+<div class='animals-area' id='animals-area'>
 <h2 class='animals-area__heading'>COMPANION ANIMALS</h2>
 <div class='animals-area__section'></div>
 <div class='animals-area__coming-soon'>coming soon</div>
@@ -137,7 +137,7 @@ I built this site with Haml, Sass, and jQuery - using partial file structure for
 <div class='divider-bar'>
 <i class='divider-bar__icon fa fa-code fa-3x'></i>
 </div>
-<div class='pedals-area'>
+<div class='pedals-area' id='pedals-area'>
 <h2 class='pedals-area__heading'>
 <span class='pedals-area__heading-span'>PEDALS</span>
 <span class='pedals-area__heading-span'>I'VE BUILT</span>
@@ -209,7 +209,7 @@ I built this site with Haml, Sass, and jQuery - using partial file structure for
 <div class='divider-bar'>
 <i class='divider-bar__icon fa fa-code fa-3x'></i>
 </div>
-<div class='design-area'>
+<div class='design-area' id='design-area'>
 <h2 class='design-area__heading'>GRAPHIC DESIGN</h2>
 <div class='design-area__gallery'>
 <div class='design-area__frame' data-zoom-frame=''>

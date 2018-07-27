@@ -13,52 +13,61 @@ $font-size-nav-items:    $font-size + 4;
   z-index: 10;
   margin: 0;
   padding: 0;
-  height: 24px;
+  height: 30px;
   text-align: center;
   background: $black;
   border-top: solid $white 3px;
   border-bottom: solid $white 3px;
   list-style: none;
   transition-duration: 100ms;
+}
 
-  @include respond-to($small-breakpoint) {
-    height: 29px;
-  }
+.primary-nav--yellow {
+  box-shadow: 0 0 0 4px $yellow;
+}
+
+.primary-nav--red {
+  box-shadow: 0 0 0 4px $red;
+}
+
+.primary-nav--green {
+  box-shadow: 0 0 0 4px $green;
+}
+
+.primary-nav--purple {
+  box-shadow: 0 0 0 4px $purple;
 }
 
   .primary-nav__tag {
+    display: block;
     position: fixed;
-    top: 20px;
+    top: 26px;
     right: 0;
     left: 0;
     z-index: -10;
     height: 27px;
     clip: rect(9px, auto, 35px, auto);
 
-    @include respond-to($small-breakpoint) {
-      top: 25px;
-    }
-
-
     @include respond-to($medium-breakpoint) {
       position: static;
-      margin: -3px 15px 0;
+      margin: -2px 15px 0;
       float: left;
+      clip: auto;
     }
   }
 
     .primary-nav__tag-link {
       color: $white;
       font-size: 11px;
-      transition-duration: 300ms;
+      transition-duration: 1200ms;
 
       &:hover {
-        transition-duration: 0ms;
+        transition-duration: 300ms;
       }
 
       &:focus {
         outline: none;
-        transition-duration: 0ms;
+        transition-duration: 300ms;
       }
     }
 
@@ -72,6 +81,7 @@ $font-size-nav-items:    $font-size + 4;
 
     @include respond-to($small-breakpoint) {
       font-size: 20px;
+      letter-spacing: normal;
     }
 
     @include respond-to($medium-breakpoint) {
@@ -80,12 +90,47 @@ $font-size-nav-items:    $font-size + 4;
     }
   }
 
+  .primary-nav__item--highlight {
+
+    @include respond-to($small-breakpoint) {
+
+      &.primary-nav__item {
+        padding-bottom: 12px;
+      }
+    }
+
+    &.primary-nav__item {
+      padding-bottom: 18px;
+      transition-duration: 300ms;
+    }
+
+    &.primary-nav__item--resume {
+      background: $yellow;
+    }
+
+    &.primary-nav__item--animals {
+      background: $red;
+    }
+
+    &.primary-nav__item--pedals {
+      background: $green;
+    }
+
+    &.primary-nav__item--design {
+      background: $purple;
+    }
+  }
+
     .primary-nav__item-link {
       display: inline-block;
-      padding-top: 11px;
+      padding-top: 18px;
       color: $white;
       text-decoration: none;
       transition-duration: 3000ms;
+
+      @include respond-to($small-breakpoint) {
+        padding-top: 12px;
+      }
 
       &:hover {
         transition-duration: 300ms;
@@ -98,22 +143,28 @@ $font-size-nav-items:    $font-size + 4;
     }
 
     .primary-nav__item-link--highlight {
-      text-shadow: 0 -2px 1px $black;
 
-      .primary-nav__item--yellow & {
+      .primary-nav__tag & {
+        text-shadow: -2px -2px 15px $white, 2px -2px 15px $white, -2px 2px 15px $white, 2px 2px 15px $white;
+      }
+
+      .primary-nav__item--resume & {
         color: $yellow;
+        text-shadow: 0 -2px 1px $black;
       }
 
-      .primary-nav__item--red & {
+      .primary-nav__item--animals & {
         color: $red;
+        text-shadow: 0 -2px 1px $black;
       }
 
-      .primary-nav__item--green & {
+      .primary-nav__item--pedals & {
         color: $green;
+        text-shadow: 0 -2px 1px $black;
       }
 
-      .primary-nav__item--purple & {
+      .primary-nav__item--design & {
         color: $purple;
+        text-shadow: 0 -2px 1px $black;
       }
     }
-

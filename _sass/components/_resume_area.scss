@@ -2,8 +2,11 @@
     #RESUME-AREA
 \*------------------------------------*/
 
+
 .resume-area {
   margin: 0 6px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   @include respond-to($medium-breakpoint) {
     margin: 0 auto;

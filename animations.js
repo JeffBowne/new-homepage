@@ -1,14 +1,5 @@
 $(document).ready(function() {
 
-    $('[data-zoom-frame]').on('click', function(e) {
-        var $frame = $(e.target);
-
-        $frame.clone().addClass('zoom-frame').appendTo('body')
-        .on('click', function(e) {
-            $(e.target).remove()
-        });
-    });
-
     $('[data-nav-link]').hover(
         function(e) {
             if ($(e.target) == this) {
@@ -97,5 +88,16 @@ $(document).ready(function() {
     positionHighlight({ section:'#animals-area', element:'.primary-nav', specialClass:'primary-nav--red', aOffset:40, bOffset:168});
     positionHighlight({ section:'#pedals-area', element:'.primary-nav', specialClass:'primary-nav--green', aOffset:40, bOffset:168});
     positionHighlight({ section:'#design-area', element:'.primary-nav', specialClass:'primary-nav--purple', aOffset:40, bOffset:168});
+
+
+
+    $('[data-zoom-frame]').on('click', function(e) {
+        var $frame = $(e.target);
+
+        $frame.clone().addClass('zoom-frame').appendTo('body')
+        .on('click', function(e) {
+            $(e.target).remove()
+        });
+    });
 
 });

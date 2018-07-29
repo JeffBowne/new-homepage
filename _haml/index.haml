@@ -34,4 +34,4 @@
       %i.divider-bar__icon.fa.fa-code.fa-3x
     = Haml::Engine.new(File.read('generated_html/design_area.html')).render
 
-    .footer
+    = Haml::Engine.new(File.read('generated_html/footer.html')).render

@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    #GALLERY
+\*------------------------------------*/
+
+$frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
+
+@keyframes frame-zoom-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.gallery {}
+
+  .gallery__frame {
+    display: inline-block;
+    position: relative;
+    margin: 2%;
+    width: 44vw;
+    height: 44vw;
+    border-radius: $round-border-radius;
+    vertical-align: middle;
+    overflow: hidden;
+
+    @include respond-to($small-breakpoint) {
+      width: 26vw;
+      height: 26vw;
+    }
+
+    @include respond-to($medium-breakpoint) {
+      width: 18vw;
+      height: 18vw;
+    }
+  }
+
+  .gallery__frame--zoom {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    width: auto;
+    height: auto;
+    background: $frame-zoom-active-bg-color;
+    border-radius: 0;
+    opacity: 0;
+    animation: frame-zoom-fade-in 200ms ease-out forwards;
+  }
+
+    .gallery__image {
+      @include center($to: 'both');
+      max-width: 200px;
+      pointer-events: none;
+
+      @include respond-to($small-breakpoint) {
+        max-width: 300px;
+      }
+
+      @include respond-to($medium-breakpoint) {
+        max-width: 400px;
+      }
+
+      @include respond-to($wide-breakpoint) {
+        max-width: 300px;
+      }
+
+      .gallery__frame--zoom & {
+        max-width: 90%;
+        max-height: 90%;
+        opacity: 0;
+        animation: frame-zoom-fade-in 400ms ease-out 200ms forwards;
+      }
+    }
+
+

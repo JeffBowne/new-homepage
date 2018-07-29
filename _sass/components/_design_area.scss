@@ -15,34 +15,3 @@
   .design-area__gallery {
     text-align: center;
   }
-
-    .design-area__frame {
-      display: inline-block;
-      position: relative;
-      margin: 12px;
-      width: 30vw;
-      height: 30vw;
-      vertical-align: middle;
-      overflow: hidden;
-
-      @include respond-to($small-breakpoint) {
-        width: 25vw;
-        height: 25vw;
-      }
-
-      @include respond-to($medium-breakpoint) {
-        width: 20vw;
-        height: 20vw;
-      }
-    }
-
-      .design-area__image {
-        @include center($to: 'both');
-        pointer-events: none;
-
-        .zoom-frame & {
-          max-width: 90%;
-          max-height: 90%;
-          opacity: 0;
-        }
-      }

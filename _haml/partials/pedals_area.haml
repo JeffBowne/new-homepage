@@ -3,7 +3,11 @@
     %span.pedals-area__heading-span PEDALS
     %span.pedals-area__heading-span I'VE BUILT
 
-  .pedals-area__gallery
-    -Dir.glob('images/pedals/*').each do |image|
-      .pedals-area__frame{ data: { zoom_frame: '' } }
-        %img.pedals-area__image{ alt: '', src: image }
+  .pedals-area__gallery.gallery
+    -Dir.glob('images/pedals/*').sort.each do |image|
+      .gallery__frame{ data: { gallery_frame: '' } }
+        %img.gallery__image{ alt: '', src: image }
+
+  .pedals-area__banner
+    %a.pedals-area__banner-link{ href: "https://www.facebook.com/sixtyfortycustompedals", target: "_blank"}
+      %img.pedals-area__banner-image{src: 'images/sixtyforty-logo.jpg', alt: ''}

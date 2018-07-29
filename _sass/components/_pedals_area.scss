@@ -2,7 +2,7 @@
     #PEDALS-AREA
 \*------------------------------------*/
 
-$pedals-area-frame-focus-color:    rgba(11, 11, 11, 0.7);
+$pedals-area-frame-focus-color:    rgba(11, 11, 11, 0.8);
 
 
 .pedals-area {
@@ -22,33 +22,18 @@ $pedals-area-frame-focus-color:    rgba(11, 11, 11, 0.7);
     text-align: center;
   }
 
-    .pedals-area__frame {
-      display: inline-block;
-      position: relative;
-      margin: 12px;
-      width: 30vw;
-      height: 30vw;
-      vertical-align: middle;
-      overflow: hidden;
+  .pedals-area__banner {
+    margin-top: 60px;
+    text-align: center;
+    overflow: hidden;
+  }
 
-      @include respond-to($small-breakpoint) {
-        width: 25vw;
-        height: 25vw;
-      }
+    .pedals-area__banner-link {}
 
-      @include respond-to($medium-breakpoint) {
-        width: 20vw;
-        height: 20vw;
-      }
-    }
-
-      .pedals-area__image {
-        @include center($to: 'both');
-        pointer-events: none;
-
-        .zoom-frame & {
-          max-width: 90%;
-          max-height: 90%;
-          opacity: 0;
-        }
+      .pedals-area__banner-image {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        max-width: 300px;
+        box-shadow: 100px 0 300px 0 $black, -100px 0 300px 0 $black;
       }

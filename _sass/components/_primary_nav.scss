@@ -90,37 +90,6 @@ $font-size-nav-items:    $font-size + 4;
     }
   }
 
-  .primary-nav__item--highlight {
-
-    @include respond-to($small-breakpoint) {
-
-      &.primary-nav__item {
-        padding-bottom: 12px;
-      }
-    }
-
-    &.primary-nav__item {
-      padding-bottom: 18px;
-      transition-duration: 300ms;
-    }
-
-    &.primary-nav__item--resume {
-      background: $yellow;
-    }
-
-    &.primary-nav__item--animals {
-      background: $red;
-    }
-
-    &.primary-nav__item--pedals {
-      background: $green;
-    }
-
-    &.primary-nav__item--design {
-      background: $purple;
-    }
-  }
-
     .primary-nav__item-link {
       display: inline-block;
       padding-top: 18px;
@@ -142,29 +111,60 @@ $font-size-nav-items:    $font-size + 4;
       }
     }
 
-    .primary-nav__item-link--highlight {
+.item-highlight {
 
-      .primary-nav__tag & {
-        text-shadow: -2px -2px 15px $white, 2px -2px 15px $white, -2px 2px 15px $white, 2px 2px 15px $white;
-      }
+  @include respond-to($small-breakpoint) {
 
-      .primary-nav__item--resume & {
-        color: $yellow;
-        text-shadow: 0 -2px 1px $black;
-      }
-
-      .primary-nav__item--animals & {
-        color: $red;
-        text-shadow: 0 -2px 1px $black;
-      }
-
-      .primary-nav__item--pedals & {
-        color: $green;
-        text-shadow: 0 -2px 1px $black;
-      }
-
-      .primary-nav__item--design & {
-        color: $purple;
-        text-shadow: 0 -2px 1px $black;
-      }
+    &.primary-nav__item {
+      padding-bottom: 12px;
     }
+  }
+
+  &.primary-nav__item {
+    padding-bottom: 18px;
+    transition-duration: 300ms;
+  }
+
+  &.primary-nav__item--resume {
+    background: $yellow;
+  }
+
+  &.primary-nav__item--animals {
+    background: $red;
+  }
+
+  &.primary-nav__item--pedals {
+    background: $green;
+  }
+
+  &.primary-nav__item--design {
+    background: $purple;
+  }
+}
+
+.link-highlight {
+
+  .primary-nav__tag & {
+    text-shadow: -2px -2px 15px $white, 2px -2px 15px $white, -2px 2px 15px $white, 2px 2px 15px $white;
+  }
+
+  .primary-nav__item--resume & {
+    color: $yellow;
+    text-shadow: 0 -2px 1px $black;
+  }
+
+  .primary-nav__item--animals & {
+    color: $red;
+    text-shadow: 0 -2px 1px $black;
+  }
+
+  .primary-nav__item--pedals & {
+    color: $green;
+    text-shadow: 0 -2px 1px $black;
+  }
+
+  .primary-nav__item--design & {
+    color: $purple;
+    text-shadow: 0 -2px 1px $black;
+  }
+}

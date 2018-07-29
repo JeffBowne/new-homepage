@@ -16,12 +16,17 @@ $spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
  * Breakpoint Widths
  */
 
-$small-breakpoint:   480px;
-$medium-breakpoint:  768px;
-$wide-breakpoint:    991px;
+$small-breakpoint:   426px;
+$medium-breakpoint:  769px;
+$wide-breakpoint:    1025px;
 
-// $medium-breakpoint:  700px;
-// $wide-breakpoint:    960px;
+/**
+ * Site Border Radiuses
+ */
+
+$small-border-radius:    5px;
+$large-border-radius:    50px;
+$round-border-radius:    50%;
 
 /**
  * Global Styles
@@ -34,6 +39,4 @@ body {
   font-size: $font-size;
   font-family: $font-family-primary;
   background: $blue;
-  // background: url(../images/parts-bg.png) no-repeat center center fixed;
-  // background-size: cover;
 }

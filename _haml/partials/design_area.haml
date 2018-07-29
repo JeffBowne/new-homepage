@@ -1,7 +1,7 @@
 .design-area#design-area
   %h2.design-area__heading GRAPHIC DESIGN
 
-  .design-area__gallery
-    -Dir.glob('images/design/*').each do |image|
-      .design-area__frame{ data: { zoom_frame: '' } }
-        %img.design-area__image{ alt: '', src: image }
+  .design-area__gallery.gallery
+    -Dir.glob('images/design/*').sort.each do |image|
+      .gallery__frame{ data: { gallery_frame: '' } }
+        %img.gallery__image{ alt: '', src: image }

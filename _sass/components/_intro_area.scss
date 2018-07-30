@@ -92,11 +92,11 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
         width: 25%;
         min-width: 200px;
         vertical-align: middle;
-        transition-duration: 1s;
+        transition: transform 1s;
 
         &:hover {
           transform: rotate(360deg);
-          transition-duration: 250s;
+          transition: transform 250s;
         }
       }
     }
@@ -141,7 +141,7 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
         color: $white;
         line-height: 1;
         vertical-align: text-top;
-        transition-duration: 300ms;
+        transition: top 300ms;
 
         &.link-highlight {
           top: 12px;
@@ -170,7 +170,7 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
         padding: 0 10%;
         color: $white;
         font-size: 10px;
-        transition-duration: 200ms;
+        transition: color 200ms, text-shadow 200ms;
 
         &:focus {
           color: $black;

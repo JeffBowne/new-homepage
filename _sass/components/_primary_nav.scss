@@ -18,8 +18,8 @@ $font-size-nav-items:    $font-size + 4;
   background: $black;
   border-top: solid $white 3px;
   border-bottom: solid $white 3px;
+  transition: box-shadow 100ms;
   list-style: none;
-  transition-duration: 100ms;
 }
 
 .primary-nav--yellow {
@@ -59,15 +59,15 @@ $font-size-nav-items:    $font-size + 4;
     .primary-nav__tag-link {
       color: $white;
       font-size: 11px;
-      transition-duration: 1200ms;
+      transition: text-shadow 1200ms;
 
       &:hover {
-        transition-duration: 300ms;
+        transition: text-shadow 300ms;
       }
 
       &:focus {
         outline: none;
-        transition-duration: 300ms;
+        transition: text-shadow 300ms;
       }
     }
 
@@ -77,7 +77,7 @@ $font-size-nav-items:    $font-size + 4;
     font-size: 14px;
     letter-spacing: -1px;
     text-align: center;
-    transition-duration: 3000ms;
+    transition: padding-bottom 3000ms, background 3000ms;
 
     @include respond-to($small-breakpoint) {
       font-size: 20px;
@@ -95,19 +95,19 @@ $font-size-nav-items:    $font-size + 4;
       padding-top: 18px;
       color: $white;
       text-decoration: none;
-      transition-duration: 3000ms;
+      transition: color 3000ms, text-shadow 3000ms;
 
       @include respond-to($small-breakpoint) {
         padding-top: 12px;
       }
 
       &:hover {
-        transition-duration: 300ms;
+        transition: color 300ms, text-shadow 300ms;
       }
 
       &:focus {
         outline: none;
-        transition-duration: 100ms;
+        transition: color 100ms, text-shadow 100ms;
       }
     }
 
@@ -122,7 +122,7 @@ $font-size-nav-items:    $font-size + 4;
 
   &.primary-nav__item {
     padding-bottom: 18px;
-    transition-duration: 300ms;
+    transition: padding-bottom 300ms, background 300ms;
   }
 
   &.primary-nav__item--resume {

@@ -34,13 +34,14 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
 
   .intro-area__banner {
     margin-bottom: $spacing-unit--x2;
-    padding-top: $spacing-unit--x3;
-    border-top: solid $white 4px;
+    padding-top: $spacing-unit;
+    border-top: solid $white 1px;
 
     @include respond-to($medium-breakpoint) {
       display: inline-block;
       margin-bottom: $spacing-unit--x4;
       padding-top: $spacing-unit--x2;
+      border-top: solid $white 4px;
     }
   }
 

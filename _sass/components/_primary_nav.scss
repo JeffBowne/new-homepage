@@ -67,8 +67,8 @@ $font-size-nav-items:    $font-size + 4;
       }
 
       &:focus {
-        outline: none;
         transition: text-shadow 300ms;
+        outline: none;
       }
     }
 
@@ -107,8 +107,8 @@ $font-size-nav-items:    $font-size + 4;
       }
 
       &:focus {
-        outline: none;
         transition: color 100ms, text-shadow 100ms;
+        outline: none;
       }
     }
 

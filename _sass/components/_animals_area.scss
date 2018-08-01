@@ -53,6 +53,7 @@
       display: block;
       box-sizing: border-box;
       vertical-align: middle;
+      direction: ltr;
 
 
       @include respond-to($medium-breakpoint) {

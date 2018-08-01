@@ -37,6 +37,8 @@ $frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
 
   .gallery__frame--zoom {
     position: fixed;
+    max-width: none;
+    max-height: none;
     top: 0;
     right: 0;
     bottom: 0;

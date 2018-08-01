@@ -30,6 +30,8 @@ $frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
     @include respond-to($medium-breakpoint) {
       width: 18vw;
       height: 18vw;
+      max-width: 250px;
+      max-height: 250px;
     }
   }
 
@@ -60,10 +62,6 @@ $frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
 
       @include respond-to($medium-breakpoint) {
         max-width: 400px;
-      }
-
-      @include respond-to($wide-breakpoint) {
-        max-width: 300px;
       }
 
       .gallery__frame--zoom & {

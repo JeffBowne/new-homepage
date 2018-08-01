@@ -99,7 +99,7 @@ $font-size-nav-items:    $font-size + 4;
       transition: color 3000ms, text-shadow 3000ms;
 
       @include respond-to($small-breakpoint) {
-        padding-top: 12px;
+        padding-top: 11px;
       }
 
       &:hover {

@@ -16,8 +16,8 @@ $frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
     display: inline-block;
     position: relative;
     margin: 2%;
-    width: 44vw;
-    height: 44vw;
+    width: 40vw;
+    height: 40vw;
     border-radius: $round-border-radius;
     vertical-align: middle;
     overflow: hidden;
@@ -55,7 +55,7 @@ $frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
 
     .gallery__image {
       @include center($to: 'both');
-      max-width: 200px;
+      max-width: 250px;
       pointer-events: none;
 
       @include respond-to($small-breakpoint) {

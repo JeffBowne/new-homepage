@@ -2,15 +2,6 @@
     #GLOBAL
 \*------------------------------------*/
 
-/**
- * Default Global Spacing Units
- */
-
-$spacing-unit:            6px;
-$spacing-unit--x2:        round($spacing-unit * 2);
-$spacing-unit--x3:        round($spacing-unit * 3);
-$spacing-unit--x4:        round($spacing-unit * 4);
-$spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
 
 /**
  * Breakpoint Widths
@@ -21,12 +12,30 @@ $medium-breakpoint:  769px;
 $wide-breakpoint:    1025px;
 
 /**
- * Site Border Radiuses
+ * Global Spacing Units
  */
 
-$small-border-radius:    5px;
-$large-border-radius:    50px;
-$round-border-radius:    50%;
+$spacing-unit:            6px;
+$spacing-unit--x2:        round($spacing-unit * 2);
+$spacing-unit--x3:        round($spacing-unit * 3);
+$spacing-unit--x4:        round($spacing-unit * 4);
+$spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
+
+/**
+ * Global Border Radiuses
+ */
+
+$border-radius-small:    5px;
+$border-radius-large:    50px;
+$border-radius-round:    50%;
+
+/**
+ * Global Border Sizes
+ */
+
+$border-thinnest:    1px solid;
+$border-thin:        2px solid;
+$border-thick:       3px solid;
 
 /**
  * Global Styles

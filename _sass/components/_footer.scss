@@ -2,14 +2,13 @@
     #FOOTER
 \*------------------------------------*/
 
-
 .footer {
   margin-top: 24px;
   padding-bottom: 10px;
   width: 100%;
   text-align: center;
   background: $black;
-  border-top: solid $white 4px;
+  border-top: $border-thick $white;
 
   @include respond-to($medium-breakpoint) {
     margin-top: 100px;
@@ -20,7 +19,7 @@
     display: inline-block;
     padding: 0 24px;
     line-height: 0;
-    border-bottom: solid $blue 2px;
+    border-bottom: $border-thin $blue;
   }
 
   .footer__page-details {
@@ -28,6 +27,5 @@
   }
 
     .footer__link {
-      color: white;
-      // font-weight: bold;
+      color: $white;
     }

@@ -2,8 +2,8 @@
     #PRIMARY-NAV
 \*------------------------------------*/
 
-$font-size-nav-items:    $font-size + 4;
-
+$font-size-nav-items:       $font-size + 4;
+$faux-border-thick-size:    4px;
 
 .primary-nav {
   position: fixed;
@@ -16,26 +16,26 @@ $font-size-nav-items:    $font-size + 4;
   height: 30px;
   text-align: center;
   background: $black;
-  border-top: solid $white 3px;
-  border-bottom: solid $white 3px;
+  border-top: $border-thick $white;
+  border-bottom: $border-thick $white;
   transition: box-shadow 100ms;
   list-style: none;
 }
 
 .primary-nav--yellow {
-  box-shadow: 0 0 0 4px $yellow;
+  box-shadow: 0 0 0 $faux-border-thick-size $yellow;
 }
 
 .primary-nav--red {
-  box-shadow: 0 0 0 4px $red;
+  box-shadow: 0 0 0 $faux-border-thick-size $red;
 }
 
 .primary-nav--green {
-  box-shadow: 0 0 0 4px $green;
+  box-shadow: 0 0 0 $faux-border-thick-size $green;
 }
 
 .primary-nav--purple {
-  box-shadow: 0 0 0 4px $purple;
+  box-shadow: 0 0 0 $faux-border-thick-size $purple;
 }
 
   .primary-nav__tag {

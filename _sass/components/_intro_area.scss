@@ -24,7 +24,7 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
 .intro-area {
   margin: 0 6px;
   padding: 60px 0;
-  border-left: solid $black 1px;
+  border-left: $border-thinnest $black;
   box-sizing: border-box;
 
   @include respond-to($medium-breakpoint) {
@@ -35,13 +35,13 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
   .intro-area__banner {
     margin-bottom: $spacing-unit--x2;
     padding-top: $spacing-unit;
-    border-top: solid $white 1px;
+    border-top: $border-thinnest $white;
 
     @include respond-to($medium-breakpoint) {
       display: inline-block;
       margin-bottom: $spacing-unit--x4;
       padding-top: $spacing-unit--x2;
-      border-top: solid $white 4px;
+      border-top: $border-thick $white;
     }
   }
 
@@ -85,7 +85,7 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
       margin: 0 auto;
       width: 80%;
       max-width: 300px;
-      border-radius: $round-border-radius;
+      border-radius: $border-radius-round;
 
       @include respond-to($medium-breakpoint) {
         display: inline-block;
@@ -107,7 +107,7 @@ $intro-area-icon-shadow:    2px 2px 0 $white, -2px -2px 0 $white, 2px -2px 0 $wh
       padding-left: 6px;
       font-size: 14px;
       line-height: 22px;
-      border-left: solid $white 4px;
+      border-left: $border-thick $white;
       box-sizing: border-box;
 
       @include respond-to($medium-breakpoint) {

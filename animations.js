@@ -64,15 +64,15 @@ $(document).ready(function() {
         });
     };
 
-    positionHighlight({ section:'#resume-area', element:'.primary-nav__item--resume', specialClass:'item-highlight', aOffset:288, bOffset:168});
-    positionHighlight({ section:'#animals-area', element:'.primary-nav__item--animals', specialClass:'item-highlight', aOffset:288, bOffset:168});
-    positionHighlight({ section:'#pedals-area', element:'.primary-nav__item--pedals', specialClass:'item-highlight', aOffset:288, bOffset:168});
-    positionHighlight({ section:'#design-area', element:'.primary-nav__item--design', specialClass:'item-highlight', aOffset:288, bOffset:168});
+    positionHighlight({ section:'#resume-area', element:'.primary-nav__item--resume', specialClass:'item-highlight', aOffset:288, bOffset:166});
+    positionHighlight({ section:'#animals-area', element:'.primary-nav__item--animals', specialClass:'item-highlight', aOffset:288, bOffset:166});
+    positionHighlight({ section:'#pedals-area', element:'.primary-nav__item--pedals', specialClass:'item-highlight', aOffset:288, bOffset:166});
+    positionHighlight({ section:'#design-area', element:'.primary-nav__item--design', specialClass:'item-highlight', aOffset:288, bOffset:166});
 
-    positionHighlight({ section:'#resume-area', element:'.primary-nav', specialClass:'primary-nav--yellow', aOffset:40, bOffset:168});
-    positionHighlight({ section:'#animals-area', element:'.primary-nav', specialClass:'primary-nav--red', aOffset:40, bOffset:168});
-    positionHighlight({ section:'#pedals-area', element:'.primary-nav', specialClass:'primary-nav--green', aOffset:40, bOffset:168});
-    positionHighlight({ section:'#design-area', element:'.primary-nav', specialClass:'primary-nav--purple', aOffset:40, bOffset:168});
+    positionHighlight({ section:'#resume-area', element:'.primary-nav', specialClass:'primary-nav--yellow', aOffset:40, bOffset:166});
+    positionHighlight({ section:'#animals-area', element:'.primary-nav', specialClass:'primary-nav--red', aOffset:40, bOffset:166});
+    positionHighlight({ section:'#pedals-area', element:'.primary-nav', specialClass:'primary-nav--green', aOffset:40, bOffset:166});
+    positionHighlight({ section:'#design-area', element:'.primary-nav', specialClass:'primary-nav--purple', aOffset:40, bOffset:166});
 
     $('[data-gallery-frame]').on('click', function(e) {
         var $frame = $(e.target);

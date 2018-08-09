@@ -2,7 +2,6 @@
     #RESUME-AREA
 \*------------------------------------*/
 
-
 .resume-area {
   margin: 0 6px;
   padding-top: 100px;
@@ -26,7 +25,7 @@
     margin: 80px 0 15px;
     line-height: 0;
     text-align: center;
-    border-bottom: solid $yellow 2px;
+    border-bottom: $border-thin $yellow;
   }
 
   .resume-area__section {

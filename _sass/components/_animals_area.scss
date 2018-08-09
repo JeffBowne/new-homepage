@@ -2,7 +2,6 @@
     #ANIMALS-AREA
 \*------------------------------------*/
 
-
 .animals-area {
   margin: 0 6px;
   padding-top: 100px;
@@ -40,7 +39,7 @@
       margin-bottom: -60px;
       width: 70%;
       max-width: 300px;
-      border-radius: $round-border-radius;
+      border-radius: $border-radius-round;
 
       @include respond-to($medium-breakpoint) {
         margin-bottom: 0;
@@ -64,27 +63,27 @@
       .animals-area__section--left & {
         padding-right: 6px;
         text-align: right;
-        border-right: 2px solid $red;
+        border-right: $border-thin $red;
 
         @include respond-to($medium-breakpoint) {
           margin-left: 12px;
           padding-left: 6px;
           text-align: left;
           border-right: 0;
-          border-left: 2px solid $red;
+          border-left: $border-thin $red;
         }
       }
 
       .animals-area__section--right & {
         padding-left: 6px;
         text-align: left;
-        border-left: 2px solid $red;
+        border-left: $border-thin $red;
 
         @include respond-to($medium-breakpoint) {
           margin-right: 12px;
           padding-right: 6px;
           text-align: right;
-          border-right: 2px solid $red;
+          border-right: $border-thin $red;
           border-left: 0;
         }
       }
@@ -112,7 +111,7 @@
       margin: 0 auto;
       width: 100%;
       max-width: 350px;
-      border-radius: $large-border-radius;
+      border-radius: $border-radius-large;
 
       @include respond-to($small-breakpoint) {
         max-width: 500px;
@@ -128,7 +127,7 @@
     .animals-area__banner-divider {
       margin: 24px auto;
       width: 20%;
-      border-bottom: 2px solid $red;
+      border-bottom: $border-thin $red;
 
       @include respond-to($medium-breakpoint) {
         display: none;

@@ -8,26 +8,26 @@
   width: 100%;
   text-align: center;
   background: $black;
-  border-top: solid $white 4px;
+  border-top: $border-thick $white;
 
   .intro-area + & {
     color: $yellow;
-    border-bottom: solid $yellow 4px;
+    border-bottom: $border-thick $yellow;
   }
 
   .resume-area + & {
     color: $red;
-    border-bottom: solid $red 4px;
+    border-bottom: $border-thick $red;
   }
 
   .animals-area + & {
     color: $green;
-    border-bottom: solid $green 4px;
+    border-bottom: $border-thick $green;
   }
 
   .pedals-area + & {
     color: $purple;
-    border-bottom: solid $purple 4px;
+    border-bottom: $border-thick $purple;
   }
 }
 

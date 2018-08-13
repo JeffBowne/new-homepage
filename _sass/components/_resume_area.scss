@@ -79,3 +79,16 @@
     .resume-area__note {
       font-size: 12px;
     }
+
+      .resume-area__link {
+        color: $white;
+
+        &:hover {
+          font-weight: bold;
+        }
+
+        &:focus {
+          font-weight: bold;
+          outline: none;
+        }
+      }

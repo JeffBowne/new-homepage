@@ -34,7 +34,6 @@
     direction: rtl;
   }
 
-
     .animals-area__photo {
       margin-bottom: -60px;
       width: 70%;
@@ -53,7 +52,6 @@
       box-sizing: border-box;
       vertical-align: middle;
       direction: ltr;
-
 
       @include respond-to($medium-breakpoint) {
         display: inline-block;
@@ -99,7 +97,7 @@
         @include respond-to($medium-breakpoint) {
           font-size: $font-size;
         }
-    }
+      }
 
   .animals-area__banner {
     margin-top: 60px;
